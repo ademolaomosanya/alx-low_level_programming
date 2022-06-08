@@ -1,16 +1,17 @@
 #include "main.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_last_digit - checks number
+ * @j: entero recibo por main.
+ * Return: Devuelve r cuando es valor absoluto positivo,
  */
-int main(void)
+int print_last_digit(int j)
 {
-int r;
-print_last_digit(98);
-print_last_digit(0);
-r = print_last_digit(-1024);
-_putchar('0' + r);
-_putchar('\n');
-return (0);
+int i;
+i = j % 10;
+if (i < 0)
+{     
+i *= -1;
+}
+_putchar(i + '0');
+return (i);
 }

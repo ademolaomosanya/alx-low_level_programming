@@ -1,12 +1,13 @@
-#include <unistd.h>
 #include "main.h"
 /**
- * main - print _putchar, followed by new line
- * Return: 0
+ * main - print _putchar
+ *
+ * Return: Always 0 (Success)
  */
-int main(void)
+int _putchar(char c)
+  
 {
-  char ch ="_putchar";
-putchar(ch, '\n');
-return (0);
+  
+  return (write(1, &c, 1));
+  
 }

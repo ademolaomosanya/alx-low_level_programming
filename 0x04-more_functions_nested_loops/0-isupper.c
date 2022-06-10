@@ -1,4 +1,4 @@
-#include "main.h"
+#include "ctype.h"
 /**
  * _isupper - checks for lowercase character.
  * @c: caracter recibo por main.

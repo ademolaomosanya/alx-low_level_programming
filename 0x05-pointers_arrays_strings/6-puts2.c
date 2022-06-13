@@ -1,36 +1,22 @@
 #include "main.h"
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * puts2 - main function.
+ * @str: Pointer, the string to print.
+ *
+ * Description: This function prints every other character of a string
+ * (divisible by two)
+ * Return: none.
  */
-int _strlen(char *s)
+void puts2(char *str)
 {
-int len = 0;
-while (*s != '\0')
+int i;
+while (str[i])
 {
-len++;
-s++;
+if (i % 2 == 0)
+{
+_putchar(str[i]);
 }
-return (len);
-}
-/**
- * puts_half - prints half of a string, followed by a new line
- * @str: string to print
- */
-void puts_half(char *str)
-{
-int idx;
-int len = _strlen(str);
-/* find the index to start depending on even/odd amount of strlen */
-if (len % 2 != 0)
-idx = (len / 2) + 1;
-else
-idx = (len / 2);
-while (idx < len)
-{
-_putchar(*(str + idx));
-idx++;
+i++;
 }
 _putchar('\n');
 }
